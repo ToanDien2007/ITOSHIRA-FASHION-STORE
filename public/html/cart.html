@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Itoshira</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />                                                                      
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Itoshira</div>
+
+      <form class="search">
+        <input type="text" placeholder="Search..." />
+        <button type="submit">🔍</button>
+      </form>
+
+      <nav class="menu">
+        <a href="home.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="trend.html">Xu hướng</a>
+        <a href="sale.html">Giảm giá</a>
+        <a href="cart.html" class="active">Giỏ hàng</a>
+      </nav>
+
+      <div class="auth">
+        <a href="register.html">Đăng ký</a>
+        <a href="login.html" class="btn-login">Đăng nhập</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Giỏ hàng của bạn</h1>
+      <div id="cart-items"></div>
+      <div style="margin-top:16px; font-size:18px; font-weight:700; text-align:right;">
+        Tổng: <span id="cart-total">0đ</span>
+      </div>
+
+      <section id="checkout" class="card" style="margin-top:20px; text-align:left;">
+        <h2 style="margin-top:0;">Thanh toán</h2>
+        <div id="checkout-auth"></div>
+        <div id="payment-methods" style="display:none;">
+          <div style="display:flex; gap:14px; flex-wrap:wrap; margin: 12px 0 16px;">
+            <label class="filter-item radio-container" style="padding-left:0;">
+              <input type="radio" name="payment" value="cod" checked />
+              <span class="radiomark"></span> COD (nhận hàng trả tiền)
+            </label>
+            <label class="filter-item radio-container" style="padding-left:0;">
+              <input type="radio" name="payment" value="bank" />
+              <span class="radiomark"></span> Chuyển khoản ngân hàng
+            </label>
+          </div>
+
+          <div id="cod-fields" style="display:none; margin: 10px 0 16px;">
+            <div class="checkout-field">
+              <label for="cod-phone" style="display:block; font-weight:600; margin-bottom:6px;">Số điện thoại</label>
+              <input id="cod-phone" type="tel" placeholder="VD: 0987654321" />
+            </div>
+            <div class="checkout-field" style="margin-top:12px;">
+              <label for="cod-address" style="display:block; font-weight:600; margin-bottom:6px;">Địa chỉ nhận hàng</label>
+              <input id="cod-address" type="text" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" />
+            </div>
+          </div>
+
+          <button class="cart" type="button" onclick="placeOrder()">Thanh toán ngay</button>
+        </div>
+      </section>
+    </main>
+        <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h4>Itoshira</h4>
+          <p>Chuyên cung cấp các sản phẩm thời trang xu hướng mới nhất.</p>
+        </div>
+        <div class="footer-box">
+          <h4>Chi nhánh cửa hàng</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Số 122 Hoàng Quốc
+              Việt,phường Nghĩa Đô, Cầu Giấy, Hà Nội
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Số 96A Trần Phú,phường Hà
+              Đông, Hà Nội
+            </li>
+            <li><i class="fas fa-phone"></i> Hotline: 0865623279</li>
+            <li>
+              <i class="fas fa-envelope"></i> Email: Toandien.ptit@gmail.com
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Liên hệ hỗ trợ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Itoshira. All rights reserved.
+      </div>
+    </footer>
+    <div class="contact-fixed">
+      <a
+        href="https://web.facebook.com/toandien.nguyen.921"
+        target="_blank"
+        class="fb"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://web.facebook.com/toandien.nguyen.921"
+        target="_blank"
+        class="mess"
+      >
+        <i class="fab fa-facebook-messenger"></i>
+      </a>
+      <a
+        href="https://web.facebook.com/pham.hung.291487"
+        target="_blank"
+        class="zalo"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+          alt="zalo"
+        />
+      </a>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>
